@@ -1,0 +1,7 @@
+EXPR_OPEN=1
+TEXT=2
+EXPR_CLOSE=3
+ID=4
+WS=5
+'{{'=1
+'}}'=3

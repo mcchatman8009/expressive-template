@@ -1,0 +1,49 @@
+{
+  "name": "expressive-template",
+  "version": "1.0.0",
+  "description": "A simple templating engine that's allows for the template replacements to be tracked as text ranges",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "mocha",
+    "build-docs": "typedoc --theme markdown --mdHideSources --out docs --includes ./src",
+    "clean": "rm -rf dist",
+    "lint": "tslint -p . -c tslint.json 'src/**/*.ts'",
+    "build-parser": "antlr4-tool -o ./src/parser/ src/grammar/ExpressiveTemplateLexer.g4 src/grammar/ExpressiveTemplateParser.g4",
+    "build": "tsc && antlr4-tool -o ./dist/parser/ src/grammar/ExpressiveTemplateLexer.g4 src/grammar/ExpressiveTemplateParser.g4"
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "docs"
+  ],
+  "keywords": [
+    "expressive-template",
+    "template",
+    "template-engine",
+    "simple-template",
+    "handler-bars"
+  ],
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mcchatman8009/expressive-template"
+  },
+  "author": {
+    "name": "Marlon Chatman",
+    "email": "mcchatman8009@gmail.com"
+  },
+  "dependencies": {
+    "antlr4-helper": "^1.0.31",
+    "antlr4-tool": "^1.0.17",
+    "lodash": "^4.17.10"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0",
+    "tslint": "^5.10.0",
+    "typedoc": "^0.11.1",
+    "typedoc-plugin-markdown": "^1.1.13",
+    "typescript": "^2.9.2"
+  }
+}
