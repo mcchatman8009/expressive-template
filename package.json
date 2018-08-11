@@ -8,7 +8,7 @@
     "test": "mocha",
     "build-docs": "typedoc --theme markdown --mdHideSources --out docs --includes ./src",
     "clean": "rm -rf dist",
-    "lint": "tslint -p . -c tslint.json 'src/**/*.ts'",
+    "lint": "tslint -p . -c tslint.json -e 'src/parser/*.ts' 'src/**/*.ts'",
     "build-parser": "antlr4-tool -o ./src/parser/ src/grammar/ExpressiveTemplateLexer.g4 src/grammar/ExpressiveTemplateParser.g4",
     "build": "tsc && antlr4-tool -o ./dist/parser/ src/grammar/ExpressiveTemplateLexer.g4 src/grammar/ExpressiveTemplateParser.g4"
   },

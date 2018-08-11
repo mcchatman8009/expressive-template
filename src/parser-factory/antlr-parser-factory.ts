@@ -1,6 +1,5 @@
 import {AntlrFactory, AntlrParser, createFactoryBuilder, createParser} from 'antlr4-helper';
 import {ExpressiveTemplateLexer} from '../parser/ExpressiveTemplateLexer';
-import {parser} from 'marked';
 import {ExpressiveTemplateParser} from '../parser/ExpressiveTemplateParser';
 
 export class AntlrParserFactory {
